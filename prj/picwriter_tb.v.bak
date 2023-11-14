@@ -1,0 +1,45 @@
+
+// Escala de tempo 
+// 1ns -> unidade de tempo
+// 1ps -> passo de simula??o
+`timescale 1ns/1ps
+
+// Nome do m?dulo
+module picwriter_tb;
+// Sinais interliga??o
+reg a_tb, b_tb; 
+wire carry_tb, sum_tb;
+// Inst?ncia a ser simulada
+halfadd U0 
+(
+  .a (a_tb), 
+  .b (b_tb), 
+  .sum (sum_tb), 
+  .carry (carry_tb)
+);
+// Simula??o
+initial begin
+forever
+begin
+clk_x = 0; 
+#10 clk_x = ~clk_x; 
+end
+end
+
+always @(posedge clk_x)
+begin
+  a_tb = 1'b0;
+  b_tb = 1'b0;
+  #5;
+  a_tb = 1'b1;
+  b_tb = 1'b0;
+  #5;
+  a_tb = 1'b0;
+  b_tb = 1'b1;
+  #5;
+  a_tb = 1'b1;
+  b_tb = 1'b1;
+  #5;
+end
+// Fim do m?dulo
+endmodule
