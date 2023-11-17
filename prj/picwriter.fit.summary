@@ -1,14 +1,14 @@
-Fitter Status : Successful - Tue Nov 14 18:20:15 2023
+Fitter Status : Successful - Fri Nov 17 11:57:01 2023
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
 Revision Name : picwriter
 Top-level Entity Name : top
 Family : Cyclone III
 Device : EP3C16F484C6
 Timing Models : Final
-Total logic elements : 735 / 15,408 ( 5 % )
-    Total combinational functions : 537 / 15,408 ( 3 % )
-    Dedicated logic registers : 563 / 15,408 ( 4 % )
-Total registers : 563
+Total logic elements : 725 / 15,408 ( 5 % )
+    Total combinational functions : 526 / 15,408 ( 3 % )
+    Dedicated logic registers : 555 / 15,408 ( 4 % )
+Total registers : 555
 Total pins : 23 / 347 ( 7 % )
 Total virtual pins : 0
 Total memory bits : 1,408 / 516,096 ( < 1 % )

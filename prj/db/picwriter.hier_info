@@ -1,7 +1,7 @@
 |top
 CLK_UART_i => CLK_UART_i.IN1
 serial_rx_i => serial_rx_i.IN1
-start_tx_i => start_tx_i.IN1
+start_tx_i => _.IN1
 serial_write_i[0] => ~NO_FANOUT~
 serial_write_i[1] => ~NO_FANOUT~
 serial_write_i[2] => ~NO_FANOUT~
@@ -10,18 +10,18 @@ serial_write_i[4] => ~NO_FANOUT~
 serial_write_i[5] => ~NO_FANOUT~
 serial_write_i[6] => ~NO_FANOUT~
 serial_write_i[7] => ~NO_FANOUT~
-busy_rx_o <= uart:U00.busy_rx_o
-busy_tx_o <= uart:U00.busy_tx_o
-valid_rx_o <= uart:U00.valid_rx_o
-serial_tx_o <= uart:U00.serial_tx_o
-serial_read_o[0] <= uart:U00.serial_read_o
-serial_read_o[1] <= uart:U00.serial_read_o
-serial_read_o[2] <= uart:U00.serial_read_o
-serial_read_o[3] <= uart:U00.serial_read_o
-serial_read_o[4] <= uart:U00.serial_read_o
-serial_read_o[5] <= uart:U00.serial_read_o
-serial_read_o[6] <= uart:U00.serial_read_o
-serial_read_o[7] <= uart:U00.serial_read_o
+busy_rx_o << uart:U00.busy_rx_o
+busy_tx_o << uart:U00.busy_tx_o
+valid_rx_o << uart:U00.valid_rx_o
+serial_tx_o << uart:U00.serial_tx_o
+serial_read_o[0] << uart:U00.serial_read_o
+serial_read_o[1] << uart:U00.serial_read_o
+serial_read_o[2] << uart:U00.serial_read_o
+serial_read_o[3] << uart:U00.serial_read_o
+serial_read_o[4] << uart:U00.serial_read_o
+serial_read_o[5] << uart:U00.serial_read_o
+serial_read_o[6] << uart:U00.serial_read_o
+serial_read_o[7] << uart:U00.serial_read_o
 
 
 |top|uart:U00

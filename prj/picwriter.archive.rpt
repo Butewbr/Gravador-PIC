@@ -1,5 +1,5 @@
 Archive Project report for picwriter
-Tue Nov 14 18:23:24 2023
+Fri Nov 17 12:02:49 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -35,7 +35,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Tue Nov 14 18:23:24 2023 ;
+; Archive Project Status ; Successful - Fri Nov 17 12:02:49 2023 ;
 ; Revision Name          ; picwriter                             ;
 ; Top-level Entity Name  ; top                                   ;
 ; Family                 ; Cyclone III                           ;
@@ -48,6 +48,7 @@ applicable agreement for further details.
 Info: File Set 'Source control' contains:
     Info: Project source and settings files
     Info: Automatically detected source files
+Critical Warning (138067): Current license file does not support incremental compilation. The Quartus II software removes all the user-specified design partitions in the design automatically.
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated archive 'D:/coding/hdl/PIC/prj/picwriter.qar'
@@ -55,10 +56,10 @@ Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'picwriter.archive.rpt'
 Info (23030): Evaluation of Tcl script c:/altera/13.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
-Info: Quartus II 64-Bit Shell was successful. 0 errors, 0 warnings
+Info: Quartus II 64-Bit Shell was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4491 megabytes
-    Info: Processing ended: Tue Nov 14 18:23:24 2023
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Fri Nov 17 12:02:49 2023
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:02
 
 
@@ -70,7 +71,7 @@ Info: Quartus II 64-Bit Shell was successful. 0 errors, 0 warnings
 ; ../src/top.v                                         ;
 ; ../src/vhd/uart.vhd                                  ;
 ; c:/altera/13.1/quartus/bin64/assignment_defaults.qdf ;
-; D:/coding/hdl/PIC/docs/arquivo.txt                   ;
+; D:/coding/hdl/PIC/docs/arquivo.hex                   ;
 ; D:/coding/hdl/PIC/src/top.v                          ;
 ; D:/coding/hdl/PIC/src/vhd/uart.vhd                   ;
 ; db/picwriter.cmp.hdb                                 ;

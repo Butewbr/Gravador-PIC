@@ -1,5 +1,5 @@
 Analysis & Synthesis report for picwriter
-Tue Nov 14 18:20:04 2023
+Fri Nov 17 11:56:50 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -14,15 +14,17 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: uart:U00
- 13. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
- 14. SignalTap II Logic Analyzer Settings
- 15. Elapsed Time Per Partition
- 16. Connections to In-System Debugging Instance "auto_signaltap_0"
- 17. Analysis & Synthesis Messages
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: uart:U00
+ 15. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
+ 16. SignalTap II Logic Analyzer Settings
+ 17. Elapsed Time Per Partition
+ 18. Connections to In-System Debugging Instance "auto_signaltap_0"
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -48,15 +50,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 14 18:20:04 2023      ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 17 11:56:50 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; picwriter                                  ;
 ; Top-level Entity Name              ; top                                        ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 768                                        ;
-;     Total combinational functions  ; 535                                        ;
-;     Dedicated logic registers      ; 563                                        ;
-; Total registers                    ; 563                                        ;
+; Total logic elements               ; 758                                        ;
+;     Total combinational functions  ; 524                                        ;
+;     Dedicated logic registers      ; 555                                        ;
+; Total registers                    ; 555                                        ;
 ; Total pins                         ; 23                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 1,408                                      ;
@@ -169,62 +171,63 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                    ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
-; ../src/vhd/uart.vhd              ; yes             ; User VHDL File               ; D:/coding/hdl/PIC/src/vhd/uart.vhd                                          ;         ;
-; ../src/top.v                     ; yes             ; User Verilog HDL File        ; D:/coding/hdl/PIC/src/top.v                                                 ;         ;
-; /coding/hdl/pic/docs/arquivo.txt ; yes             ; Auto-Found File              ; /coding/hdl/pic/docs/arquivo.txt                                            ;         ;
-; sld_signaltap.vhd                ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/sld_signaltap.vhd            ;         ;
-; sld_signaltap_impl.vhd           ; yes             ; Encrypted Megafunction       ; c:/altera/13.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd       ;         ;
-; sld_ela_control.vhd              ; yes             ; Encrypted Megafunction       ; c:/altera/13.1/quartus/libraries/megafunctions/sld_ela_control.vhd          ;         ;
-; lpm_shiftreg.tdf                 ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf             ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_constant.inc             ;         ;
-; dffeea.inc                       ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/dffeea.inc                   ;         ;
-; aglobal131.inc                   ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc               ;         ;
-; sld_mbpmg.vhd                    ; yes             ; Encrypted Megafunction       ; c:/altera/13.1/quartus/libraries/megafunctions/sld_mbpmg.vhd                ;         ;
-; sld_ela_trigger_flow_mgr.vhd     ; yes             ; Encrypted Megafunction       ; c:/altera/13.1/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd ;         ;
-; sld_buffer_manager.vhd           ; yes             ; Encrypted Megafunction       ; c:/altera/13.1/quartus/libraries/megafunctions/sld_buffer_manager.vhd       ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/altsyncram.tdf               ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/stratix_ram_block.inc        ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_mux.inc                  ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_decode.inc               ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/a_rdenreg.inc                ;         ;
-; altrom.inc                       ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/altrom.inc                   ;         ;
-; altram.inc                       ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/altram.inc                   ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/altdpram.inc                 ;         ;
-; db/altsyncram_rs14.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/coding/hdl/PIC/prj/db/altsyncram_rs14.tdf                                ;         ;
-; altdpram.tdf                     ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/altdpram.tdf                 ;         ;
-; memmodes.inc                     ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/others/maxplus2/memmodes.inc               ;         ;
-; a_hdffe.inc                      ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/a_hdffe.inc                  ;         ;
-; alt_le_rden_reg.inc              ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/alt_le_rden_reg.inc          ;         ;
-; altsyncram.inc                   ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/altsyncram.inc               ;         ;
-; lpm_mux.tdf                      ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_mux.tdf                  ;         ;
-; muxlut.inc                       ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/muxlut.inc                   ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/bypassff.inc                 ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/altshift.inc                 ;         ;
-; db/mux_jrc.tdf                   ; yes             ; Auto-Generated Megafunction  ; D:/coding/hdl/PIC/prj/db/mux_jrc.tdf                                        ;         ;
-; lpm_decode.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_decode.tdf               ;         ;
-; declut.inc                       ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/declut.inc                   ;         ;
-; lpm_compare.inc                  ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_compare.inc              ;         ;
-; db/decode_4uf.tdf                ; yes             ; Auto-Generated Megafunction  ; D:/coding/hdl/PIC/prj/db/decode_4uf.tdf                                     ;         ;
-; lpm_counter.tdf                  ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_counter.tdf              ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_add_sub.inc              ;         ;
-; cmpconst.inc                     ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/cmpconst.inc                 ;         ;
-; lpm_counter.inc                  ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_counter.inc              ;         ;
-; alt_counter_stratix.inc          ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/alt_counter_stratix.inc      ;         ;
-; db/cntr_1fi.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/coding/hdl/PIC/prj/db/cntr_1fi.tdf                                       ;         ;
-; db/cmpr_hfc.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/coding/hdl/PIC/prj/db/cmpr_hfc.tdf                                       ;         ;
-; db/cntr_95j.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/coding/hdl/PIC/prj/db/cntr_95j.tdf                                       ;         ;
-; db/cntr_5fi.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/coding/hdl/PIC/prj/db/cntr_5fi.tdf                                       ;         ;
-; db/cntr_p1j.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/coding/hdl/PIC/prj/db/cntr_p1j.tdf                                       ;         ;
-; db/cmpr_efc.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/coding/hdl/PIC/prj/db/cmpr_efc.tdf                                       ;         ;
-; sld_rom_sr.vhd                   ; yes             ; Encrypted Megafunction       ; c:/altera/13.1/quartus/libraries/megafunctions/sld_rom_sr.vhd               ;         ;
-; sld_hub.vhd                      ; yes             ; Encrypted Megafunction       ; c:/altera/13.1/quartus/libraries/megafunctions/sld_hub.vhd                  ;         ;
-; sld_jtag_hub.vhd                 ; yes             ; Encrypted Megafunction       ; c:/altera/13.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd             ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                   ;
++----------------------------------+-----------------+---------------------------------------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                   ; File Name with Absolute Path                                                ; Library ;
++----------------------------------+-----------------+---------------------------------------------+-----------------------------------------------------------------------------+---------+
+; ../src/vhd/uart.vhd              ; yes             ; User VHDL File                              ; D:/coding/hdl/PIC/src/vhd/uart.vhd                                          ;         ;
+; ../src/top.v                     ; yes             ; User Verilog HDL File                       ; D:/coding/hdl/PIC/src/top.v                                                 ;         ;
+; /coding/hdl/pic/docs/arquivo.hex ; yes             ; Auto-Found Hexadecimal (Intel-Format) File  ; /coding/hdl/pic/docs/arquivo.hex                                            ;         ;
+; sld_signaltap.vhd                ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/sld_signaltap.vhd            ;         ;
+; sld_signaltap_impl.vhd           ; yes             ; Encrypted Megafunction                      ; c:/altera/13.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd       ;         ;
+; sld_ela_control.vhd              ; yes             ; Encrypted Megafunction                      ; c:/altera/13.1/quartus/libraries/megafunctions/sld_ela_control.vhd          ;         ;
+; lpm_shiftreg.tdf                 ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf             ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_constant.inc             ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/dffeea.inc                   ;         ;
+; aglobal131.inc                   ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc               ;         ;
+; sld_mbpmg.vhd                    ; yes             ; Encrypted Megafunction                      ; c:/altera/13.1/quartus/libraries/megafunctions/sld_mbpmg.vhd                ;         ;
+; sld_ela_trigger_flow_mgr.vhd     ; yes             ; Encrypted Megafunction                      ; c:/altera/13.1/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd ;         ;
+; sld_buffer_manager.vhd           ; yes             ; Encrypted Megafunction                      ; c:/altera/13.1/quartus/libraries/megafunctions/sld_buffer_manager.vhd       ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/altsyncram.tdf               ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/stratix_ram_block.inc        ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_mux.inc                  ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_decode.inc               ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/a_rdenreg.inc                ;         ;
+; altrom.inc                       ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/altrom.inc                   ;         ;
+; altram.inc                       ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/altram.inc                   ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/altdpram.inc                 ;         ;
+; db/altsyncram_rs14.tdf           ; yes             ; Auto-Generated Megafunction                 ; D:/coding/hdl/PIC/prj/db/altsyncram_rs14.tdf                                ;         ;
+; altdpram.tdf                     ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/altdpram.tdf                 ;         ;
+; memmodes.inc                     ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/others/maxplus2/memmodes.inc               ;         ;
+; a_hdffe.inc                      ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/a_hdffe.inc                  ;         ;
+; alt_le_rden_reg.inc              ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/alt_le_rden_reg.inc          ;         ;
+; altsyncram.inc                   ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/altsyncram.inc               ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_mux.tdf                  ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/muxlut.inc                   ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/bypassff.inc                 ;         ;
+; altshift.inc                     ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/altshift.inc                 ;         ;
+; db/mux_jrc.tdf                   ; yes             ; Auto-Generated Megafunction                 ; D:/coding/hdl/PIC/prj/db/mux_jrc.tdf                                        ;         ;
+; lpm_decode.tdf                   ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_decode.tdf               ;         ;
+; declut.inc                       ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/declut.inc                   ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_compare.inc              ;         ;
+; db/decode_4uf.tdf                ; yes             ; Auto-Generated Megafunction                 ; D:/coding/hdl/PIC/prj/db/decode_4uf.tdf                                     ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_counter.tdf              ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_add_sub.inc              ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/cmpconst.inc                 ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_counter.inc              ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                                ; c:/altera/13.1/quartus/libraries/megafunctions/alt_counter_stratix.inc      ;         ;
+; db/cntr_1fi.tdf                  ; yes             ; Auto-Generated Megafunction                 ; D:/coding/hdl/PIC/prj/db/cntr_1fi.tdf                                       ;         ;
+; db/cmpr_hfc.tdf                  ; yes             ; Auto-Generated Megafunction                 ; D:/coding/hdl/PIC/prj/db/cmpr_hfc.tdf                                       ;         ;
+; db/cntr_95j.tdf                  ; yes             ; Auto-Generated Megafunction                 ; D:/coding/hdl/PIC/prj/db/cntr_95j.tdf                                       ;         ;
+; db/cntr_5fi.tdf                  ; yes             ; Auto-Generated Megafunction                 ; D:/coding/hdl/PIC/prj/db/cntr_5fi.tdf                                       ;         ;
+; db/cntr_p1j.tdf                  ; yes             ; Auto-Generated Megafunction                 ; D:/coding/hdl/PIC/prj/db/cntr_p1j.tdf                                       ;         ;
+; db/cmpr_efc.tdf                  ; yes             ; Auto-Generated Megafunction                 ; D:/coding/hdl/PIC/prj/db/cmpr_efc.tdf                                       ;         ;
+; sld_rom_sr.vhd                   ; yes             ; Encrypted Megafunction                      ; c:/altera/13.1/quartus/libraries/megafunctions/sld_rom_sr.vhd               ;         ;
+; sld_hub.vhd                      ; yes             ; Encrypted Megafunction                      ; c:/altera/13.1/quartus/libraries/megafunctions/sld_hub.vhd                  ;         ;
+; sld_jtag_hub.vhd                 ; yes             ; Encrypted Megafunction                      ; c:/altera/13.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd             ;         ;
+; /coding/hdl/pic/docs/arquivo.txt ; yes             ; Auto-Found File                             ; /coding/hdl/pic/docs/arquivo.txt                                            ;         ;
++----------------------------------+-----------------+---------------------------------------------+-----------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------+
@@ -232,20 +235,20 @@ applicable agreement for further details.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 768                      ;
+; Estimated Total logic elements              ; 758                      ;
 ;                                             ;                          ;
-; Total combinational functions               ; 535                      ;
+; Total combinational functions               ; 524                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 210                      ;
-;     -- 3 input functions                    ; 152                      ;
-;     -- <=2 input functions                  ; 173                      ;
+;     -- 4 input functions                    ; 213                      ;
+;     -- 3 input functions                    ; 139                      ;
+;     -- <=2 input functions                  ; 172                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 441                      ;
+;     -- normal mode                          ; 430                      ;
 ;     -- arithmetic mode                      ; 94                       ;
 ;                                             ;                          ;
-; Total registers                             ; 563                      ;
-;     -- Dedicated logic registers            ; 563                      ;
+; Total registers                             ; 555                      ;
+;     -- Dedicated logic registers            ; 555                      ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 23                       ;
@@ -253,8 +256,8 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0                        ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 341                      ;
-; Total fan-out                               ; 3688                     ;
-; Average fan-out                             ; 3.17                     ;
+; Total fan-out                               ; 3637                     ;
+; Average fan-out                             ; 3.18                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -263,9 +266,9 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                       ; Library Name ;
 +---------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top                                                                                                    ; 535 (2)           ; 563 (0)      ; 1408        ; 0            ; 0       ; 0         ; 23   ; 0            ; |top                                                                                                                                                                                                                                                                                                                                      ; work         ;
-;    |sld_hub:auto_hub|                                                                                   ; 123 (1)           ; 90 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                     ; work         ;
-;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                                                    ; 122 (84)          ; 90 (62)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                                                                                                                                                                                        ; work         ;
+; |top                                                                                                    ; 524 (2)           ; 555 (0)      ; 1408        ; 0            ; 0       ; 0         ; 23   ; 0            ; |top                                                                                                                                                                                                                                                                                                                                      ; work         ;
+;    |sld_hub:auto_hub|                                                                                   ; 125 (1)           ; 90 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                     ; work         ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                                                    ; 124 (86)          ; 90 (62)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                                                                                                                                                                                        ; work         ;
 ;          |sld_rom_sr:hub_info_reg|                                                                      ; 21 (21)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                                                                                                                                                                                                                ; work         ;
 ;          |sld_shadow_jsm:shadow_jsm|                                                                    ; 17 (17)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                                                                                                                                                                                                              ; work         ;
 ;    |sld_signaltap:auto_signaltap_0|                                                                     ; 313 (1)           ; 403 (22)     ; 1408        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_signaltap:auto_signaltap_0                                                                                                                                                                                                                                                                                                       ; work         ;
@@ -313,7 +316,7 @@ applicable agreement for further details.
 ;                |lpm_shiftreg:ram_data_shift_out|                                                        ; 11 (11)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                         ; work         ;
 ;                |lpm_shiftreg:status_data_shift_out|                                                     ; 15 (15)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                      ; work         ;
 ;             |sld_rom_sr:crc_rom_sr|                                                                     ; 18 (18)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                    ; work         ;
-;    |uart:U00|                                                                                           ; 97 (97)           ; 70 (70)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart:U00                                                                                                                                                                                                                                                                                                                             ; work         ;
+;    |uart:U00|                                                                                           ; 84 (84)           ; 62 (62)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart:U00                                                                                                                                                                                                                                                                                                                             ; work         ;
 +---------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -327,17 +330,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 
 
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; uart:U00|buffer_tx[0..7]              ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 8 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                              ;
++-----------------------+---------------------------+----------------------------------------------------------------------+
+; Register name         ; Reason for Removal        ; Registers Removed due to This Register                               ;
++-----------------------+---------------------------+----------------------------------------------------------------------+
+; uart:U00|buffer_tx[7] ; Stuck at GND              ; uart:U00|buffer_tx[6], uart:U00|buffer_tx[5], uart:U00|buffer_tx[4], ;
+;                       ; due to stuck port data_in ; uart:U00|buffer_tx[3], uart:U00|buffer_tx[2], uart:U00|buffer_tx[1], ;
+;                       ;                           ; uart:U00|buffer_tx[0]                                                ;
++-----------------------+---------------------------+----------------------------------------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 563   ;
+; Total registers                              ; 555   ;
 ; Number of registers using Synchronous Clear  ; 61    ;
 ; Number of registers using Synchronous Load   ; 68    ;
 ; Number of registers using Asynchronous Clear ; 180   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 343   ;
+; Number of registers using Clock Enable       ; 336   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -365,21 +389,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|uart:U00|count_bit_tx[3]                                                                              ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart:U00|buffer_rx[6]                                                                                 ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |top|uart:U00|buffer_tx[0]                                                                                 ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[0]                    ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]                       ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0] ;
-; 6:1                ; 9 bits    ; 36 LEs        ; 9 LEs                ; 27 LEs                 ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]                             ;
-; 34:1               ; 4 bits    ; 88 LEs        ; 56 LEs               ; 32 LEs                 ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[0]                      ;
-; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[0]      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|uart:U00|count_bit_tx[3] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart:U00|buffer_rx[6]    ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |top|uart:U00|buffer_tx[0]    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
 
 
 +-------------------------------------------------------+
@@ -464,14 +482,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+------------------+---------------------+------------------+--------------+----------+------------------------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
 
 
-+---------------------------------+
-; Elapsed Time Per Partition      ;
-+------------------+--------------+
-; Partition Name   ; Elapsed Time ;
-+------------------+--------------+
-; sld_hub:auto_hub ; 00:00:00     ;
-; Top              ; 00:00:00     ;
-+------------------+--------------+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------+
@@ -485,22 +502,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; start_tx_i                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; start_tx_i                ; N/A     ;
 ; uart:U00|pin_tx            ; pre-synthesis ; connected ; Top            ; post-synthesis    ; uart:U00|pin_tx~_wirecell ; N/A     ;
 ; uart:U00|pin_tx            ; pre-synthesis ; connected ; Top            ; post-synthesis    ; uart:U00|pin_tx~_wirecell ; N/A     ;
-; uart:U00|serial_write_i[0] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; VCC                       ; N/A     ;
-; uart:U00|serial_write_i[0] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; VCC                       ; N/A     ;
-; uart:U00|serial_write_i[1] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; VCC                       ; N/A     ;
-; uart:U00|serial_write_i[1] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; VCC                       ; N/A     ;
+; uart:U00|serial_write_i[0] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                       ; N/A     ;
+; uart:U00|serial_write_i[0] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                       ; N/A     ;
+; uart:U00|serial_write_i[1] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                       ; N/A     ;
+; uart:U00|serial_write_i[1] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                       ; N/A     ;
 ; uart:U00|serial_write_i[2] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                       ; N/A     ;
 ; uart:U00|serial_write_i[2] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                       ; N/A     ;
-; uart:U00|serial_write_i[3] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; VCC                       ; N/A     ;
-; uart:U00|serial_write_i[3] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; VCC                       ; N/A     ;
-; uart:U00|serial_write_i[4] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; VCC                       ; N/A     ;
-; uart:U00|serial_write_i[4] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; VCC                       ; N/A     ;
-; uart:U00|serial_write_i[5] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; VCC                       ; N/A     ;
-; uart:U00|serial_write_i[5] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; VCC                       ; N/A     ;
+; uart:U00|serial_write_i[3] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                       ; N/A     ;
+; uart:U00|serial_write_i[3] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                       ; N/A     ;
+; uart:U00|serial_write_i[4] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                       ; N/A     ;
+; uart:U00|serial_write_i[4] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                       ; N/A     ;
+; uart:U00|serial_write_i[5] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                       ; N/A     ;
+; uart:U00|serial_write_i[5] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                       ; N/A     ;
 ; uart:U00|serial_write_i[6] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                       ; N/A     ;
 ; uart:U00|serial_write_i[6] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                       ; N/A     ;
-; uart:U00|serial_write_i[7] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; VCC                       ; N/A     ;
-; uart:U00|serial_write_i[7] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; VCC                       ; N/A     ;
+; uart:U00|serial_write_i[7] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                       ; N/A     ;
+; uart:U00|serial_write_i[7] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; GND                       ; N/A     ;
 ; CLK_UART_i                 ; post-fitting  ; connected ; Top            ; post-synthesis    ; CLK_UART_i                ; N/A     ;
 +----------------------------+---------------+-----------+----------------+-------------------+---------------------------+---------+
 
@@ -511,7 +528,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Tue Nov 14 18:19:54 2023
+    Info: Processing started: Fri Nov 17 11:56:43 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off picwriter -c picwriter
 Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file /coding/hdl/pic/src/vhd/uart.vhd
@@ -520,8 +537,22 @@ Info (12021): Found 2 design units, including 1 entities, in source file /coding
 Info (12021): Found 1 design units, including 1 entities, in source file /coding/hdl/pic/src/top.v
     Info (12023): Found entity 1: top
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10999): Verilog HDL warning at top.v(24): can't infer memory for variable 'data_memory' with attribute '"M9K"'.
-Info (10648): Verilog HDL Display System Task info at top.v(29): First line of data_memory: bb
+Warning (10850): Verilog HDL warning at top.v(29): number of words (6) in memory file does not match the number of elements in the address range [0:999]
+Warning (10230): Verilog HDL assignment warning at arquivo.hex(1): truncated value with size 56 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at arquivo.hex(2): truncated value with size 88 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at arquivo.hex(3): truncated value with size 168 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at arquivo.hex(4): truncated value with size 56 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at arquivo.hex(5): truncated value with size 56 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at arquivo.hex(6): truncated value with size 40 to match size of target (10)
+Info (10648): Verilog HDL Display System Task info at top.v(31): Line           0 of data_memory: 0fa
+Info (10648): Verilog HDL Display System Task info at top.v(31): Line           1 of data_memory: 00d
+Info (10648): Verilog HDL Display System Task info at top.v(31): Line           2 of data_memory: 0f2
+Info (10648): Verilog HDL Display System Task info at top.v(31): Line           3 of data_memory: 3fa
+Info (10648): Verilog HDL Display System Task info at top.v(31): Line           4 of data_memory: 3fa
+Info (10648): Verilog HDL Display System Task info at top.v(31): Line           5 of data_memory: 1ff
+Warning (10855): Verilog HDL warning at top.v(28): initial value for variable data_memory should be constant
+Warning (10230): Verilog HDL assignment warning at top.v(38): truncated value with size 10 to match size of target (8)
+Warning (10030): Net "data_memory[999][7..0]" at top.v(26) has no driver or initial value, using a default initial value '0'
 Info (12128): Elaborating entity "uart" for hierarchy "uart:U00"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_rs14.tdf
     Info (12023): Found entity 1: altsyncram_rs14
@@ -543,11 +574,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_efc
 Info (12033): Analysis and Synthesis generated SignalTap II or debug node instance "auto_signaltap_0"
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Info (13000): Registers with preset signals will power-up high
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "sld_hub:auto_hub|receive[0][0]" is stuck at GND
-Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
 Info (35024): Succesfully connected in-system debug instance "auto_signaltap_0" to all 23 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -560,15 +586,15 @@ Warning (21074): Design contains 8 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "serial_write_i[5]"
     Warning (15610): No output dependent on input pin "serial_write_i[6]"
     Warning (15610): No output dependent on input pin "serial_write_i[7]"
-Info (21057): Implemented 823 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 812 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 13 output pins
-    Info (21061): Implemented 784 logic cells
+    Info (21061): Implemented 773 logic cells
     Info (21064): Implemented 11 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4731 megabytes
-    Info: Processing ended: Tue Nov 14 18:20:04 2023
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:09
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 4722 megabytes
+    Info: Processing ended: Fri Nov 17 11:56:50 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
 
 

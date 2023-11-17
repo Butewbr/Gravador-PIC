@@ -1,5 +1,5 @@
 Flow report for picwriter
-Tue Nov 14 18:20:24 2023
+Fri Nov 17 11:57:11 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,17 +40,17 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Tue Nov 14 18:20:19 2023      ;
+; Flow Status                        ; Successful - Fri Nov 17 11:57:06 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; picwriter                                  ;
 ; Top-level Entity Name              ; top                                        ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C16F484C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 735 / 15,408 ( 5 % )                       ;
-;     Total combinational functions  ; 537 / 15,408 ( 3 % )                       ;
-;     Dedicated logic registers      ; 563 / 15,408 ( 4 % )                       ;
-; Total registers                    ; 563                                        ;
+; Total logic elements               ; 725 / 15,408 ( 5 % )                       ;
+;     Total combinational functions  ; 526 / 15,408 ( 3 % )                       ;
+;     Dedicated logic registers      ; 555 / 15,408 ( 4 % )                       ;
+; Total registers                    ; 555                                        ;
 ; Total pins                         ; 23 / 347 ( 7 % )                           ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 1,408 / 516,096 ( < 1 % )                  ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/14/2023 18:19:55 ;
+; Start date & time ; 11/17/2023 11:56:44 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; picwriter           ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------------------------------------------+---------------+-------------+------------------+
 ; Assignment Name                     ; Value                                                                     ; Default Value ; Entity Name ; Section Id       ;
 +-------------------------------------+---------------------------------------------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 9447189875095.169999679510608                                             ; --            ; --          ; --               ;
+; COMPILER_SIGNATURE_ID               ; 9447189875095.170023300320636                                             ; --            ; --          ; --               ;
 ; ENABLE_SIGNALTAP                    ; On                                                                        ; --            ; --          ; --               ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                        ; --            ; --          ; --               ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                         ; --            ; --          ; --               ;
@@ -117,11 +117,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:09     ; 1.0                     ; 4731 MB             ; 00:00:08                           ;
-; Fitter                    ; 00:00:09     ; 1.0                     ; 5514 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4599 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4716 MB             ; 00:00:02                           ;
-; Total                     ; 00:00:23     ; --                      ; --                  ; 00:00:20                           ;
+; Analysis & Synthesis      ; 00:00:06     ; 1.0                     ; 4722 MB             ; 00:00:06                           ;
+; Fitter                    ; 00:00:09     ; 1.0                     ; 5530 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4600 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4716 MB             ; 00:00:03                           ;
+; Total                     ; 00:00:20     ; --                      ; --                  ; 00:00:19                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
