@@ -7,6 +7,8 @@ reg CLK_UART_tb;
 reg serial_rx_tb, start_tx_tb;
 reg [7:0] serial_write_tb;
 reg addr_tb, we_tb, i_tb;
+reg [55:0] data_tb;
+wire [55:0] q_tb;
 
 top U00 (
    .CLK_UART_i (CLK_UART_tb),
@@ -25,16 +27,31 @@ top U00 (
    .i (i_tb)
 );
 
+(*ramstyle = "M9K"*) reg [55:0] data_memory [4:0];
+
 initial begin
-  i_tb = 0;
-  addr_tb = 1;
-  #1;
-  i_tb = 1;
-  addr_tb = 2;
-  #2;
-  i_tb = 2;
-  addr_tb = 3;
+	$readmemh("C:\\Users\\heiit\\Documents\\GitHub\\Gravador-PIC\\docs\\arquivo.hex", data_memory);
+	$display("Line %d of data_memory: %h", 0, data_memory[0]);
+	//data = data_memory[i];
 end
 
+initial begin
+  CLK_UART_tb = 0;
+  data_tb = data_memory[0];
+  i_tb = 0;
+  we_tb = 1;
+  #6
+  i_tb = 1;
+  data_tb = data_memory[1];
+  we_tb = 1;
+  #12;
+  we_tb = 0;
+  i_tb = 0;
+  #10;
+end
+
+always begin
+  #5 CLK_UART_tb = ~CLK_UART_tb;
+end
   
 endmodule

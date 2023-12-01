@@ -1,9 +1,9 @@
 library verilog;
 use verilog.vl_types.all;
-entity single_port_ram_with_init is
+entity single_port_ram is
     generic(
-        DATA_WIDTH      : integer := 8;
-        ADDR_WIDTH      : integer := 6
+        DATA_WIDTH      : integer := 56;
+        ADDR_WIDTH      : integer := 5
     );
     port(
         data            : in     vl_logic_vector;
@@ -15,4 +15,4 @@ entity single_port_ram_with_init is
     attribute mti_svvh_generic_type : integer;
     attribute mti_svvh_generic_type of DATA_WIDTH : constant is 1;
     attribute mti_svvh_generic_type of ADDR_WIDTH : constant is 1;
-end single_port_ram_with_init;
+end single_port_ram;

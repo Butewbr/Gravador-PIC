@@ -2,7 +2,7 @@
 // Single port RAM with single read/write address 
 
 module single_port_ram 
-#(parameter DATA_WIDTH = 13, parameter ADDR_WIDTH = 6)
+#(parameter DATA_WIDTH = 56, parameter ADDR_WIDTH = 5)
 (
 	input [(DATA_WIDTH-1):0] data,
 	input [(ADDR_WIDTH-1):0] addr,

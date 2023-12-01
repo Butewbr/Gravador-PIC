@@ -10,6 +10,11 @@ entity top is
         busy_tx_o       : out    vl_logic;
         valid_rx_o      : out    vl_logic;
         serial_tx_o     : out    vl_logic;
-        serial_read_o   : out    vl_logic_vector(7 downto 0)
+        serial_read_o   : out    vl_logic_vector(7 downto 0);
+        addr_i          : in     vl_logic;
+        we_i            : in     vl_logic;
+        q_o             : out    vl_logic_vector(55 downto 0);
+        i               : in     vl_logic;
+        data            : in     vl_logic_vector(55 downto 0)
     );
 end top;

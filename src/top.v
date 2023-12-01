@@ -24,19 +24,19 @@ output busy_rx_o, busy_tx_o;
 output valid_rx_o;                 
 output serial_tx_o;                
 output [7:0] serial_read_o;
-output [13:0] q_o;
-output reg [13:0] data;
+output [55:0] q_o;
+input [55:0] data;
 
 reg [7:0] buffer;
 
 //integer counter, i, flag;
 
-(*ramstyle = "M9K"*) reg [13:0] data_memory [5:0];
+(*ramstyle = "M9K"*) reg [55:0] data_memory [4:0];
 
 initial begin
 	$readmemh("C:\\Users\\heiit\\Documents\\GitHub\\Gravador-PIC\\docs\\arquivo.hex", data_memory);
    $display("Line %d of data_memory: %h", i, data_memory[i]);
-	data = data_memory[i];
+	//data = data_memory[i];
 end
 /*
 always @(start_tx_i) begin
@@ -49,7 +49,7 @@ always @(start_tx_i) begin
 end
 */
 
-
+/*
 uart U00
 (
    .CLK_UART_i(CLK_UART_i),
@@ -62,12 +62,12 @@ uart U00
    .serial_tx_o(serial_tx_o),                
    .serial_read_o(serial_read_o)
 );
-
+*/
 single_port_ram U01
 
 (
 	.data(data),
-	.addr(i),
+	.addr({4'b0000, i}),
 	.we(we_i), 
 	.clk(CLK_UART_i),
 	.q(q_o)

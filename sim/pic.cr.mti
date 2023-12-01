@@ -1,8 +1,15 @@
-D:/coding/hdl/PIC/src/top_tb.v {1 {vlog -work work D:/coding/hdl/PIC/src/top_tb.v
+C:/Users/heiit/Documents/GitHub/Gravador-PIC/src/top.v {1 {vlog -work work C:/Users/heiit/Documents/GitHub/Gravador-PIC/src/top.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module top_tb
+-- Compiling module top
 
 Top level modules:
-	top_tb
+	top
+
+} {} {}} C:/Users/heiit/Documents/GitHub/Gravador-PIC/src/memram.v {1 {vlog -work work C:/Users/heiit/Documents/GitHub/Gravador-PIC/src/memram.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module single_port_ram
+
+Top level modules:
+	single_port_ram
 
 } {} {}}
