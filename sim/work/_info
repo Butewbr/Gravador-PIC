@@ -4,7 +4,6 @@ K3
 cModel Technology
 Z0 dC:\altera\13.1
 vhalfadd
-!i10b 1
 Z1 !s100 kfi[M70]^QG1dOe<X__dH3
 Z2 IYhPHGcT0KcNm;ll0R?MC=1
 Z3 V]Q0?Rf:^35S2i4UGLXE;23
@@ -15,48 +14,106 @@ Z7 FC:/Users/heiit/Documents/GitHub/Gravador-PIC/prj/halfadd.v
 L0 1
 Z8 OV;L;10.1d;51
 r1
-!s85 0
 31
-!s108 1699984186.007000
-!s107 C:/Users/heiit/Documents/GitHub/Gravador-PIC/prj/halfadd.v|
 Z9 !s90 -reportprogress|300|-work|work|C:/Users/heiit/Documents/GitHub/Gravador-PIC/prj/halfadd.v|
-!s101 -O0
 Z10 o-work work -O0
+Z11 !s108 1699984186.007000
+Z12 !s107 C:/Users/heiit/Documents/GitHub/Gravador-PIC/prj/halfadd.v|
+!i10b 1
+!s85 0
+!s101 -O0
 vhalfadder_tb
-Z11 I3gAg<W]lBOWZH5ahQG7>J1
-Z12 V8eli44lK81l3oan<Y]RW[1
+Z13 I3gAg<W]lBOWZH5ahQG7>J1
+Z14 V8eli44lK81l3oan<Y]RW[1
 R4
-Z13 w1699981797
-Z14 8C:\Users\heiit\Documents\GitHub\Gravador-PIC\prj\picwriter_tb.v
-Z15 FC:\Users\heiit\Documents\GitHub\Gravador-PIC\prj\picwriter_tb.v
+Z15 w1699981797
+Z16 8C:\Users\heiit\Documents\GitHub\Gravador-PIC\prj\picwriter_tb.v
+Z17 FC:\Users\heiit\Documents\GitHub\Gravador-PIC\prj\picwriter_tb.v
 L0 8
 R8
 r1
 31
 R10
-Z16 !s100 k]CHR=YTf<G]>@WhRJl2;3
-Z17 !s108 1699981803.746000
-Z18 !s107 C:\Users\heiit\Documents\GitHub\Gravador-PIC\prj\picwriter_tb.v|
-Z19 !s90 -reportprogress|300|-work|work|C:\Users\heiit\Documents\GitHub\Gravador-PIC\prj\picwriter_tb.v|
+Z18 !s100 k]CHR=YTf<G]>@WhRJl2;3
+Z19 !s108 1699981803.746000
+Z20 !s107 C:\Users\heiit\Documents\GitHub\Gravador-PIC\prj\picwriter_tb.v|
+Z21 !s90 -reportprogress|300|-work|work|C:\Users\heiit\Documents\GitHub\Gravador-PIC\prj\picwriter_tb.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vpicwriter_tb
-Z20 IRbX7zXR5Dl:1Y7j4ZdjFY3
-Z21 VRFI88NWzRcO?iLWh=c4V72
+Z22 IRbX7zXR5Dl:1Y7j4ZdjFY3
+Z23 VRFI88NWzRcO?iLWh=c4V72
 R4
-Z22 w1699984177
-R14
-R15
+Z24 w1699984177
+R16
+R17
 L0 5
 R8
 r1
 31
-R19
+R21
+R10
+Z25 !s100 a@iBXi3;b`^@3Rk6@@Nd02
+Z26 !s108 1699984185.925000
+R20
+!i10b 1
+!s85 0
+!s101 -O0
+vsingle_port_ram_with_init
+Z27 !s100 l;JZYlXc^P=GeD0TA9h_G2
+Z28 I=nm?ne`bGm>nZ]>FnA??J2
+Z29 Vh8GmQ2WW<Ni8`cl2lEA;K3
+Z30 dD:\coding\hdl\PIC\sim
+Z31 w1700837395
+Z32 8D:/coding/hdl/PIC/src/memram.v
+Z33 FD:/coding/hdl/PIC/src/memram.v
+L0 5
+R8
+r1
+31
+Z34 !s90 -reportprogress|300|-work|work|D:/coding/hdl/PIC/src/memram.v|
+R10
+Z35 !s108 1701432138.129000
+Z36 !s107 D:/coding/hdl/PIC/src/memram.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vtop
+Z37 !s100 >_:L^;IH?:W7F^53?WX>71
+Z38 IIiUBOVi_0I3jQjEIijSaM1
+Z39 VJ[JmF<2kB33nMlT9[W2JK1
+R30
+Z40 w1700233953
+Z41 8D:/coding/hdl/PIC/src/top.v
+Z42 FD:/coding/hdl/PIC/src/top.v
+L0 1
+R8
+r1
+31
+Z43 !s90 -reportprogress|300|-work|work|D:/coding/hdl/PIC/src/top.v|
 R10
 !i10b 1
-Z23 !s100 a@iBXi3;b`^@3Rk6@@Nd02
 !s85 0
-Z24 !s108 1699984185.925000
-R18
+Z44 !s108 1701432138.371000
+Z45 !s107 D:/coding/hdl/PIC/src/top.v|
 !s101 -O0
+vtop_tb
+!i10b 1
+Z46 !s100 VDRQNSk<nJH3?7ERaZ3h=1
+Z47 If0gQ1?eU0[``KHXIT9WJ:3
+Z48 VN7^ihbmI9enFg9D=Qco243
+R30
+Z49 w1701431863
+Z50 8D:/coding/hdl/PIC/src/top_tb.v
+Z51 FD:/coding/hdl/PIC/src/top_tb.v
+L0 4
+R8
+r1
+!s85 0
+31
+!s108 1701432138.747000
+!s107 D:/coding/hdl/PIC/src/top_tb.v|
+Z52 !s90 -reportprogress|300|-work|work|D:/coding/hdl/PIC/src/top_tb.v|
+!s101 -O0
+R10
