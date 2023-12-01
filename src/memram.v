@@ -1,9 +1,8 @@
 // Quartus II Verilog Template
-// Single port RAM with single read/write address and initial contents 
-// specified with an initial block
+// Single port RAM with single read/write address 
 
-module single_port_ram_with_init
-#(parameter DATA_WIDTH=8, parameter ADDR_WIDTH=6)
+module single_port_ram 
+#(parameter DATA_WIDTH = 13, parameter ADDR_WIDTH = 6)
 (
 	input [(DATA_WIDTH-1):0] data,
 	input [(ADDR_WIDTH-1):0] addr,
@@ -16,22 +15,6 @@ module single_port_ram_with_init
 
 	// Variable to hold the registered read address
 	reg [ADDR_WIDTH-1:0] addr_reg;
-
-	integer counter, i, flag;
-
-(*ramstyle = "M9K"*) reg [9:0] data_memory [999:0];
-	
-	// Specify the initial contents.  You can also use the $readmemb
-	// system task to initialize the RAM variable from a text file.
-	// See the $readmemb template page for details.
-	initial 
-	begin : INIT
-		integer i;
-		$readmemh("D:\\coding\\hdl\\PIC\\docs\\arquivo.hex", data_memory);
-		for(i = 0; i < 2**ADDR_WIDTH; i = i + 1)
-				ram[i] = data_memory[0];
-			
-	end 
 
 	always @ (posedge clk)
 	begin
